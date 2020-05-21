@@ -13,7 +13,7 @@ let envConfig;
 if (fs.existsSync(dotenvFile)) {
   envConfig = {
     ...dotenv_1.parse(fs.readFileSync(dotenvFile)),
-    SP_ENV: process.env.SP_ENV 
+    SP_ENV: process.env.SP_ENV
   };
 }
 
@@ -26,10 +26,10 @@ if (typeof require !== 'undefined') {
   require.extensions['.css'] = file => {};
 }
 
-let assetPrefix ={};
+let assetPrefix = {};
 // SP_ENV
 
-if(process.env.NODE_ENV === 'development'){
+if (process.env.NODE_ENV === 'development') {
   assetPrefix = {
     dev: '//localhost:4000',
     test: '//localhost:4000',
@@ -39,12 +39,11 @@ if(process.env.NODE_ENV === 'development'){
 } else {
   assetPrefix = {
     dev: '//localhost:4000',
-    test: '//test-service-platform-rce.sunmi.com',
-    uat: '//uat-service-platform-rce.sunmi.com',
-    master: '//service-platform-rce.sunmi.com'
+    test: '//106.54.190.112',
+    uat: '//106.54.190.112',
+    master: '//106.54.190.112'
   };
 }
-
 
 const config = withTypescript(
   withCss(
