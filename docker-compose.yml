@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  app:
+    container_name: service-platform-rce.sunmi.com
+    image: 'docker-hlcx.sunmi.com/service-platform-rce.sunmi.com:${IMAGE_TAG}'
+    restart: always
+    environment:
+      CACHE_TTL: 5
+      PORT: 4000
+      SP_ENV:
+      BUILD_TAG:
+    ports:
+      - "13400:4000"

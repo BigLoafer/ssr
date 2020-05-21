@@ -1,0 +1,14 @@
+npm-debug.log
+.git
+.vscode
+.DS_Store
+.huskyrc
+.lintstagedrc
+.editorconfig
+.prettierrc.json
+.stylelintrc
+README.md
+Dockerfile
+Jenkinsfile
+commitlint.config.js
+tslint.json
